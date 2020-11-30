@@ -7,12 +7,37 @@ services:
     - db_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgrespassword
+
+  mysql: 
+    image: genschsa/mysql-employees
+    restart: always
+    volumes:
+    - db_data_mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlpassword
+    ports:
+    - "3306:3306"
+
   graphql-engine:
-    image: hasura/graphql-engine:v1.3.3
+    image: hasura/graphql-engine:pull5655-633f084f
     ports:
     - "8080:8080"
     depends_on:
     - "postgres"
+    - "mysql"
+    command:
+    - graphql-engine
+    - --mysql-host 
+    - mysql
+    - --mysql-user 
+    - root
+    - --mysql-port 
+    - "3306"
+    - --mysql-dbname 
+    - employees
+    - --mysql-password 
+    - mysqlpassword
+    - serve 
     restart: always
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/postgres
@@ -25,4 +50,5 @@ services:
       # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
 volumes:
   db_data:
+  db_data_mysql:
 
