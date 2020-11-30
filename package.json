@@ -5,9 +5,14 @@
   "author": "Pavel 'PK' Kaminsky",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "src/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "src/*"
+    ],
+    "nohoist": [
+      "**/02-graphql-code-generator/**"
+    ]
+  },
   "scripts": {
     "start-01": "yarn workspace 01-basic start"
   },
