@@ -1,7 +1,6 @@
 {
   "name": "graphql-express",
   "version": "1.0.0",
-  "main": "server.js",
   "author": "Pavel 'PK' Kaminsky",
   "license": "MIT",
   "private": true,
@@ -14,7 +13,8 @@
     ]
   },
   "scripts": {
-    "start-01": "yarn workspace 01-basic start"
+    "start-01": "yarn workspace 01-basic-apollo start",
+    "start-02": "yarn workspace 02-graphql-code-generator start"
   },
   "dependencies": {
     "ts-node-dev": "^1.0.0",

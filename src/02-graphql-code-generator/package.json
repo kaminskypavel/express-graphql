@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "Pavel 'PK' Kaminsky",
   "license": "MIT",
+  "private": true,
   "dependencies": {
     "graphql": "^15.4.0"
   },

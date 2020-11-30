@@ -9,9 +9,11 @@ const app = express();
 app.use(cors());
 app.use(compression());
 
+// https://www.apollographql.com/docs/apollo-server/integrations/middleware/
 const server = new ApolloServer({
     schema,
     validationRules: [depthLimit(2)],
+    playground: process.env.NODE_ENV !== "production"
 });
 
 server.applyMiddleware({ app, path: '/graphql' });
