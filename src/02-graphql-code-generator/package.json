@@ -1,0 +1,13 @@
+{
+  "name": "02-graphql-code-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Pavel 'PK' Kaminsky",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "^15.4.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.19.4"
+  }
+}
