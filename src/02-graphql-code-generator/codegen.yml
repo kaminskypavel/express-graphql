@@ -6,3 +6,9 @@ generates:
       - typescript-operations
       - typescript-resolvers
       # - typescript-react-query
+
+# https://graphql-code-generator.com/docs/integrations/
+# hooks:
+#   afterAllFileWrite:
+#     - prettier --write
+#     - eslint --fix
