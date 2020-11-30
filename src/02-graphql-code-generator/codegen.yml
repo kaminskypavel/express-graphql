@@ -1,5 +1,8 @@
-schema: http://localhost:4000/graphql
+schema: https://countries.trevorblades.com/
 generates:
   ./src/types.d.ts:
     plugins:
       - typescript
+      - typescript-operations
+      - typescript-resolvers
+      # - typescript-react-query

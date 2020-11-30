@@ -7,10 +7,13 @@
     "graphql": "^15.4.0"
   },
   "scripts": {
-    "generate": "graphql-codegen -c codegen.yml"
+    "generate": "graphql-codegen"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.19.4",
-    "@graphql-codegen/typescript": "^1.19.0"
+    "@graphql-codegen/typescript": "^1.19.0",
+    "@graphql-codegen/typescript-operations": "^1.17.12",
+    "@graphql-codegen/typescript-react-query": "^0.1.1",
+    "@graphql-codegen/typescript-resolvers": "^1.18.0"
   }
 }
