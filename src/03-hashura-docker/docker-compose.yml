@@ -1,4 +1,4 @@
-# mysql
+# postgres
 
 version: '3.6'
 services:
@@ -6,29 +6,15 @@ services:
     image: postgres:12
     restart: always
     volumes:
-    - db_data1:/var/lib/postgresql/data
+    - db_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgrespassword
   graphql-engine:
-    image: hasura/graphql-engine:pull5655-633f084f
+    image: hasura/graphql-engine:v1.3.3
     ports:
     - "8080:8080"
     depends_on:
     - "postgres"
-    - db
-    command:
-    - graphql-engine
-    - --mysql-host
-    - db
-    - --mysql-user
-    - hashura
-    - --mysql-port
-    - "3306"
-    - --mysql-dbname
-    - hashura_test
-    - --mysql-password
-    - hashura
-    - serve
     restart: always
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/postgres
@@ -39,23 +25,6 @@ services:
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
       ## uncomment next line to set an admin secret
       # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
-
-  db:
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: hashura_test
-      MYSQL_USER: hashura
-      MYSQL_PASSWORD: hashura
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8081:8080
-
 volumes:
-  db_data1:
+  db_data:
 
