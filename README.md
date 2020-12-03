@@ -9,10 +9,10 @@ most of the example are base on [Apollo Server](https://www.apollographql.com/do
 
 - `02-graphql-code-generator` - a neat tool to generate usefull types and methods for a given gql endpoint. for this example we usd the (https://countries.trevorblades.com) endpoint to generate the content of `src/types.d.ts`
 
-- `03-hashura-docker` - exploration of hashura with [self hosting ](https://hasura.io/docs/1.0/graphql/core/getting-started/docker-simple.html#docker-simple) solution. to get this going perform : 
-  -  cd src/03-hashura-docker
+- `03-hasura-docker` - exploration of hasura with [self hosting ](https://hasura.io/docs/1.0/graphql/core/getting-started/docker-simple.html#docker-simple) solution. to get this going perform : 
+  -  cd src/03-hasura-docker
   -  docker-compose up -d
-  -  if `03-hashura-docker_graphql-engine_1` keeps on failing delete it and re-ren docker compose. this is happening because of race condition with the mysql container
+  -  if `03-hasura-docker_graphql-engine_1` keeps on failing delete it and re-ren docker compose. this is happening because of race condition with the mysql container
   -  http://localhost:8080/console
 
 
