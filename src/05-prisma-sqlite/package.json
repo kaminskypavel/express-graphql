@@ -1,0 +1,19 @@
+{
+  "name": "05-prisma-sqlite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Pavel 'PK' Kaminsky",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/cli": "^2.12.1",
+    "@prisma/client": "^2.12.1"
+  },
+  "scripts": {
+    "start": "ts-node-dev --rs --respawn src/script.ts",
+    "generate": "cd src && prisma generate",
+    "update-to-2": "yarn codemods update-2.12 ./"
+  },
+  "devDependencies": {
+    "@prisma/codemods": "^0.6.1"
+  }
+}

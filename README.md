@@ -14,7 +14,11 @@ most of the example are base on [Apollo Server](https://www.apollographql.com/do
   -  docker-compose up -d
   -  if `03-hasura-docker_graphql-engine_1` keeps on failing delete it and re-ren docker compose. this is happening because of race condition with the mysql container
   -  http://localhost:8080/console
-
+  
+- `05-prisma` - exploration of [Prisma2](https://www.prisma.io) 
+  -  cd src/05-prisma
+  -  `yarn generate`
+  -  `yarn start`
 
 ### Misc. Tools
 
