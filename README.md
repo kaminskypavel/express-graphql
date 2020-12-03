@@ -14,3 +14,15 @@ most of the example are base on [Apollo Server](https://www.apollographql.com/do
   -  docker-compose up -d
   -  if `03-hashura-docker_graphql-engine_1` keeps on failing delete it and re-ren docker compose. this is happening because of race condition with the mysql container
   -  http://localhost:8080/console
+
+
+### Misc. Tools
+
+#### Explorers
+
+- [GraphQL Playground Hosted](https://www.graphqlbin.com/v2/new) ⭐ 
+- [GraphQL Playground Standalon](https://github.com/graphql/graphql-playground)
+- [GraphiQL](https://github.com/graphql/graphiql)
+
+#### Online Examples 
+- [Countries GraphiQL](https://lucasconstantino.github.io/graphiql-online/)
