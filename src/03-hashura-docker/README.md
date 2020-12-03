@@ -21,6 +21,12 @@ Hasura
 - [Demo](https://hasura.io/blog/introducing-actions/#scalable-architecture)
 - [Github Actions](https://github.com/hasura/hasura-actions-examples)
 
+### Authorization & Authentication 
+- [Access Control](https://hasura.io/docs/1.0/graphql/core/auth/authorization/common-roles-auth-examples.html)
+
 
 ### Migrations 
 - [Docs](https://hasura.io/docs/1.0/graphql/core/migrations/index.html)
+
+## Tools
+- https://hasura.io/blog/hasura-data-dictionary/
