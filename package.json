@@ -10,7 +10,7 @@
     ],
     "nohoist": [
       "**/02-graphql-code-generator/**",
-      "**/03-hashura-docker/react-app/**"
+      "**/03-hasura-docker/react-app/**"
     ]
   },
   "scripts": {
