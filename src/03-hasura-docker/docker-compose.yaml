@@ -21,13 +21,13 @@ services:
     - --mysql-host
     - db
     - --mysql-user
-    - hashura
+    - hasura
     - --mysql-port
     - "3306"
     - --mysql-dbname
-    - hashura_test
+    - hasura_test
     - --mysql-password
-    - hashura
+    - hasura
     - serve
     restart: always
     environment:
@@ -46,9 +46,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: hashura_test
-      MYSQL_USER: hashura
-      MYSQL_PASSWORD: hashura
+      MYSQL_DATABASE: hasura_test
+      MYSQL_USER: hasura
+      MYSQL_PASSWORD: hasura
 
   adminer:
     image: adminer
