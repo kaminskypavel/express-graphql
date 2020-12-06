@@ -21,7 +21,8 @@ most of the example are base on [Apollo Server](https://www.apollographql.com/do
   -  `yarn start`
 
 ### Misc. Tools
-
+  - [FakeQL](https://fakeql.com/)
+  - [Security Scanner](stackhawk.com)
 #### Explorers
 
 - [GraphQL Playground Hosted](https://www.graphqlbin.com/v2/new) ⭐ 
